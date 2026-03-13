@@ -178,7 +178,7 @@ export function useFaceDetection(
     const sizeScale = isMobile ? 0.8 : 1.0;
     const dpr = (window.devicePixelRatio || 1);
     
-    const dotSize = (meshStyle?.dotSize || 1.1) * dpr * sizeScale;
+    const dotSize = (meshStyle?.dotSize || 1.1) * dpr * (isMobile ? 0.6 : 1.0);
     const lineWidth = (meshStyle?.lineWidth || 1.2) * dpr * sizeScale;
     const showLines = meshStyle?.showLines !== false;
 
@@ -228,7 +228,7 @@ export function useFaceDetection(
 
     // Draw all landmarks
     // Reduced density for mobile
-    const skipFactor = isMobile ? 3 : 1; 
+    const skipFactor = 1; 
     for (let i = 0; i < landmarks.length; i += skipFactor) {
       if (specialIndices.has(i)) continue;
 

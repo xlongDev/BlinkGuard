@@ -113,7 +113,7 @@ export function SettingsPanel({
 
   const presets = {
     neon: {
-      preset: "neon", dotSize: 1.1, lineWidth: 1.2,
+      preset: "neon", dotSize: 1.0, lineWidth: 1.2,
       baseColor: "rgba(45, 212, 191, 0.45)", noseColor: "rgba(224, 242, 254, 0.6)", lipsColor: "rgba(254, 226, 226, 0.6)",
       eyeColor: "rgba(250, 204, 21, 0.9)", blinkColor: "rgba(255, 69, 0, 0.95)",
       eyeDotSize: 1.5, eyeDotCount: 16, mouthDotSize: 1.3, mouthDotCount: 20, showLines: false

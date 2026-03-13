@@ -5,7 +5,8 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  // 关键修改：base 必须是 /仓库名/（你的仓库名是 BlinkGuard）
+  base: '/BlinkGuard/',
   plugins: [inspectAttr(), react()],
   resolve: {
     alias: {

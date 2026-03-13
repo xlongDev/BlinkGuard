@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Github, Languages } from "lucide-react";
 import { ThemeToggle } from '../theme/ThemeToggle';
-import { BlinkIcon } from "./BlinkIcon";
 import { getLanguage, setLanguage } from '@/i18n';
 
 export function Navbar() {
@@ -34,7 +33,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2 group cursor-default">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
-              <BlinkIcon className="h-6 w-6 text-white" />
+              <img src={`${import.meta.env.BASE_URL}favicon.svg`} className="h-6 w-6 object-contain" alt="Logo" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl tracking-tight text-foreground">
@@ -57,7 +56,7 @@ export function Navbar() {
               <span className="text-xs font-bold uppercase">{getLanguage() === 'zh' ? 'EN' : '中文'}</span>
             </button>
             <a
-              href="https://github.com/xlongDev"
+              href="https://github.com/xlongDev/BlinkGuard"
               target="_blank"
               rel="noopener noreferrer"
               className="h-10 w-10 rounded-xl glass-card flex items-center justify-center hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300 hover:scale-110 hover:rotate-[8deg] active:scale-90 active:rotate-0"
